@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+lxml
+html5lib
+dnspython
+python-whois
+ipwhois
+selenium
+whois
+argparse
+pyinstaller
+urllib3
