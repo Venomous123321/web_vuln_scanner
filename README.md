@@ -50,6 +50,8 @@ It supports:
 Install the required modules:
 
 ```bash
+git clone https://github.com/Venomous123321/web_vuln_scanner.git
+cd web_vuln_scan 
 pip install -r requirements.txt
 python web_vuln_scan.py
 ```
