@@ -80,17 +80,17 @@ python web_vuln_scan.py
 
 🔘 Quick CLI Scan
 ```bash
-python web_vuln_scan.py -u https://target.com -m quick --save --html
+python web_vuln_scan.py -u {enter website  link} -m quick --save --html
 ```
 🧠 Deep AI Scan
 ```bash
-python web_vuln_scan.py -u https://target.com -m deep --save --html
+python web_vuln_scan.py -u {enter website  link} -m deep --save --html
 ```
 🎯 Custom Scan (Levels)
 ```bash
-python web_vuln_scan.py -u https://target.com -m custom
+python web_vuln_scan.py -u {enter website  link} -m custom
 ```
 🏁 CTF Flag Mode
 ```bash
-python web_vuln_scan.py -u https://target.com -m ctf
+python web_vuln_scan.py -u {enter website  link} -m ctf
 ```
