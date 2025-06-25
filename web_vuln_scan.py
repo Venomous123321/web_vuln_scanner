@@ -1092,7 +1092,7 @@ def save_config(cfg):
 # === Print Banner ===
 def print_banner():
     print("""
-    33[1;91m
+    
           
 ███████╗██╗   ██╗██████╗ ██╗██████╗ ████████╗ █████╗ 
 ██╔════╝██║   ██║██╔══ █╗██║██╔══██╗╚══██╔══╝██╔══██╗
@@ -1444,7 +1444,7 @@ if __name__ == '__main__':
 
 
 """
-M 8: Advanced Target Intelligence Module — P 3 (Expanded)
+M 8: Advanced Target Intelligence Module — P 3 
 Modules:
 - Visual Screenshot Engine
 - DOM Snapshot Comparison
@@ -1589,7 +1589,7 @@ def render_report(data, filename="report.md"):
 
 # === Test CLI ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[M 8 — P 3: Visual Engine (Extended)]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Visual Engine ]\033[0m")
     url = input("Enter full target URL (e.g., https://example.com): ").strip()
     browser_choice = input("Browser [chrome/firefox]: ").strip().lower()
     proxy_input = input("Proxy (leave blank if none): ").strip() or None
