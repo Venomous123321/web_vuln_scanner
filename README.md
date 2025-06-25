@@ -52,9 +52,6 @@ Install the required modules:
 ```bash
 git clone https://github.com/Venomous123321/web_vuln_scanner.git
 ```
-```bash
-cd web_vuln_scan
-```
 🔘 Create  environment for requirements
 ```bash
 sudo apt update
@@ -69,6 +66,9 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 ⏩ Then
+```bash
+cd web_vuln_scan
+```
 ```bash
 pip install -r requirements.txt
 ```
