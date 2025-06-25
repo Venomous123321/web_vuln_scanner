@@ -141,7 +141,7 @@ def display_results(results):
         print(f"    → {explain_vulnerability(r)}")
         print(f"    ⚙  Fix: {suggest_fix(r['type'])}")
 
-# === Save Results as JSON (for later Phases) ===
+# === Save Results as JSON (for later Ms) ===
 def save_json_report(results):
     try:
         with open(REPORT_FILE, 'w', encoding='utf-8') as f:
@@ -150,7 +150,7 @@ def save_json_report(results):
     except Exception as e:
         print(f"[!] Failed to save JSON report: {e}")
 
-# === Phase 1 Main Execution ===
+# === M 1 Main Execution ===
 if __name__ == '__main__':
     print_banner()
     target = input("Enter target URL (with http/https): ").strip()
@@ -192,10 +192,10 @@ preload_modules()
 for _ in range(10):
     time.sleep(0.05)  # Simulated warmup
 
-# === End of Phase 1 ===
+# === End of M 1 ===
 
 
-# =========================== Phase 2: Utilities + Session + Form Handlers (Expanded) =========================== #
+# =========================== M 2: Utilities + Session + Form Handlers (Expanded) =========================== #
 
 # === Enhanced Request with Proxy and Auth Support ===
 def enhanced_request(method, url, **kwargs):
@@ -341,9 +341,9 @@ def analyze_page_assets(url):
         for s in scripts:
             print(f"    - {s.strip()[:80]}...")
 
-# === Phase 2 Test Execution ===
+# === M 2 Test Execution ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 2 Self-Test]\033[0m")
+    print("\n\033[1;96m[M 2 Self-Test]\033[0m")
     test_url = "https://httpbin.org/forms/post"
     print_session_config()
     analyze_page_assets(test_url)
@@ -353,7 +353,7 @@ if __name__ == '__main__':
     #-----------------End 2-------------
 
 
-# =========================== Phase 3: Full Vulnerability Scanner (500+ lines) =========================== #
+# =========================== M 3: Full Vulnerability Scanner (500+ lines) =========================== #
 
 # === Payload Databases ===
 XSS_PAYLOADS = [
@@ -570,7 +570,7 @@ def run_all_scans(url):
 
 # === Developer Test Stub ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Full Scanner Test: Phase 3]\033[0m")
+    print("\n\033[1;96m[Full Scanner Test: M 3]\033[0m")
     target = input("Enter target URL: ").strip()
     results = run_all_scans(target)
     if results:
@@ -582,7 +582,7 @@ if __name__ == '__main__':
 # --------------end 3-----------
 
 
-# =========================== Phase 4: WAF Bypass + Auto PoC Generator (500+ lines) =========================== #
+# =========================== M 4: WAF Bypass + Auto PoC Generator (500+ lines) =========================== #
 
 
 
@@ -708,7 +708,7 @@ def simulate_poc_dev():
 
 # === Manual WAF Bypass & PoC Test ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 4: WAF Bypass & PoC Generator]\033[0m")
+    print("\n\033[1;96m[M 4: WAF Bypass & PoC Generator]\033[0m")
     test_url = input("Enter URL for WAF Bypass Testing: ").strip()
     result = scan_waf_bypass(test_url)
     if result:
@@ -718,7 +718,7 @@ if __name__ == '__main__':
 #----------------end 4-----------
 
 
-# =========================== Phase 5: AI Fixes + Severity + TXT/JSON/CSV Reports (500+ lines) =========================== #
+# =========================== M 5: AI Fixes + Severity + TXT/JSON/CSV Reports (500+ lines) =========================== #
 
 
 # === Vulnerability Severity Levels ===
@@ -857,7 +857,7 @@ def generate_all_reports(results):
 
 # === Sample Test Hook ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 5: AI Fix + Report Generator Test Mode]\033[0m")
+    print("\n\033[1;96m[M 5: AI Fix + Report Generator Test Mode]\033[0m")
     test_data = [
         {"type": "XSS", "url": "http://example.com?q=", "payload": "<script>alert(1)</script>"},
         {"type": "SQL Injection", "url": "http://example.com/login", "payload": "' OR 1=1--"},
@@ -871,7 +871,7 @@ if __name__ == '__main__':
 #--------------------end 5-----------
 
 
-# =========================== Phase 6: HTML Report Generator + Packaging =========================== #
+# =========================== M 6: HTML Report Generator + Packaging =========================== #
 import os
 from datetime import datetime
 from html import escape
@@ -997,7 +997,7 @@ def generate_full_html_report(results, file="scan_report_full.html"):
 
 # === Test HTML Output ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 6: HTML Report Generation Test]\033[0m")
+    print("\n\033[1;96m[M 6: HTML Report Generation Test]\033[0m")
     test_data = [
         {"type": "XSS", "url": "http://example.com?q=", "payload": "<script>alert(1)</script>"},
         {"type": "SQL Injection", "url": "http://example.com/login", "payload": "' OR 1=1--"},
@@ -1009,7 +1009,7 @@ if __name__ == '__main__':
     #-------end 6-------
 
     
-# =========================== Phase 7: CLI + Packaging + Full Command Interface (500+ lines) =========================== #
+# =========================== M 7: CLI + Packaging + Full Command Interface (500+ lines) =========================== #
 
 
 
@@ -1203,7 +1203,7 @@ RELEASE:
 
 """
 
-Phase 8: Advanced Target Intelligence Module — Part 1 & 2
+M 8: Advanced Target Intelligence Module — P 1 & 2
 Modules:
 - Domain Parsing
 - Full DNS Enumeration
@@ -1403,7 +1403,7 @@ def detect_cms(url):
     return "Unknown"
 
 # === Master Function ===
-def run_intelligence_phase1(url):
+def run_intelligence_M1(url):
     domain = extract_domain(url)
     try:
         ip = socket.gethostbyname(domain)
@@ -1436,15 +1436,15 @@ def run_intelligence_phase1(url):
 
 # === CLI Entry ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 1 & 2: Target Intelligence]\033[0m")
+    print("\n\033[1;96m[M 8 — P 1 & 2: Target Intelligence]\033[0m")
     target_url = input("Enter full target URL (https://domain.com): ").strip()
-    result = run_intelligence_phase1(target_url)
+    result = run_intelligence_M1(target_url)
     print("\n[✓] Intelligence Gathering Summary:")
     print(json.dumps(result, indent=2))
 
 
 """
-Phase 8: Advanced Target Intelligence Module — Part 3 (Expanded)
+M 8: Advanced Target Intelligence Module — P 3 (Expanded)
 Modules:
 - Visual Screenshot Engine
 - DOM Snapshot Comparison
@@ -1589,7 +1589,7 @@ def render_report(data, filename="report.md"):
 
 # === Test CLI ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 3: Visual Engine (Extended)]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Visual Engine (Extended)]\033[0m")
     url = input("Enter full target URL (e.g., https://example.com): ").strip()
     browser_choice = input("Browser [chrome/firefox]: ").strip().lower()
     proxy_input = input("Proxy (leave blank if none): ").strip() or None
@@ -1604,7 +1604,7 @@ if __name__ == '__main__':
 
 
         """
-Phase 8: Advanced Target Intelligence Module — Part 3 (Module B only)
+M 8: Advanced Target Intelligence Module — P 3 (Module B only)
 Modules:
 - Multi-tab Page Automation
 - HAR (Network Capture) via DevTools
@@ -1705,7 +1705,7 @@ def extract_javascript_console(logs):
         print(f"  {line}")
     return output
 
-# === Phase Task Runner ===
+# === M Task Runner ===
 def run_advanced_tab_analysis(url_list):
     driver = get_chrome_devtools_driver()
     print("\n[•] Running multi-tab evidence capture")
@@ -1729,7 +1729,7 @@ def run_advanced_tab_analysis(url_list):
 
 # === Developer CLI Test ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 3: Module B Only: Tabs, HAR, JS Capture]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Module B Only: Tabs, HAR, JS Capture]\033[0m")
     urls = []
     while True:
         u = input("Add URL (leave blank to finish): ").strip()
@@ -1746,7 +1746,7 @@ if __name__ == '__main__':
 
 
         """
-Phase 8: Advanced Target Intelligence Module — Part 3 (Module C)
+M 8: Advanced Target Intelligence Module — P 3 (Module C)
 Modules:
 - DOM Mutation Observer Injection
 - Shadow DOM Enumeration
@@ -1843,7 +1843,7 @@ def run_dom_behavior_analysis(url):
 
 # === CLI Entrypoint ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 3: Module C — DOM Behavior Analysis]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Module C — DOM Behavior Analysis]\033[0m")
     url = input("Enter full URL to monitor (https://example.com): ").strip()
     result = run_dom_behavior_analysis(url)
     if result:
@@ -1856,7 +1856,7 @@ if __name__ == '__main__':
 
 
 """
-Phase 8: Advanced Target Intelligence Module — Part 3 (Module D)
+M 8: Advanced Target Intelligence Module — P 3 (Module D)
 Modules:
 - CSP Header Evaluation Scoring
 - DOM Risk Fingerprint Generator
@@ -1984,7 +1984,7 @@ def run_risk_analysis(url):
 
 # === CLI Entrypoint ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 3: Module D — Risk Profile Generator]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Module D — Risk Profile Generator]\033[0m")
     url = input("Enter full URL to analyze for DOM risk: ").strip()
     report = run_risk_analysis(url)
     if report:
@@ -1995,7 +1995,7 @@ if __name__ == '__main__':
 
 
 """
-Phase 8: Advanced Target Intelligence Module — Part 3 (Module E)
+M 8: Advanced Target Intelligence Module — P 3 (Module E)
 Modules:
 - JavaScript Variable Extraction
 - Taint Source Tracking
@@ -2125,7 +2125,7 @@ def run_semantic_analysis(url):
 
 # === CLI Entrypoint ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 8 — Part 3: Module E — Semantic Analysis]\033[0m")
+    print("\n\033[1;96m[M 8 — P 3: Module E — Semantic Analysis]\033[0m")
     url = input("Enter URL to analyze: ").strip()
     result = run_semantic_analysis(url)
     print("\n[✓] Summary:")
@@ -2133,7 +2133,7 @@ if __name__ == '__main__':
         print(f"- {field['label']} ({field['type']}): {field['purpose']}")
 
 """
-Phase 10 — Part 1: AI-Based Fix Recommendation Engine
+M 10 — P 1: AI-Based Fix Recommendation Engine
 Features:
 - Offline AI-like fix generation
 - OWASP Top 10 patch logic mapping
@@ -2242,7 +2242,7 @@ def export_fix_json(fix_data_list, target_url):
 
 # === CLI Usage Example ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 10 — Part 1: AI Fix Generator]\033[0m")
+    print("\n\033[1;96m[M 10 — P 1: AI Fix Generator]\033[0m")
     target = input("Enter target URL (e.g., https://example.com): ").strip()
     print("\nEnter vulnerability types found (comma-separated, e.g., xss,sqli,csrf):")
     vulns = input("Vulnerabilities: ").strip().split(',')
@@ -2262,7 +2262,7 @@ if __name__ == '__main__':
 
 
 """
-Phase 10 – Part 2 (Module A): Payload + Metadata Repository
+M 10 – P 2 (Module A): Payload + Metadata Repository
 Includes:
 - 100+ Payloads for XSS, SQLi, CSRF, Open Redirect, LFI, SSTI
 - Each payload has: id, name, payload, method, tags, impact, risk_level
@@ -2417,6 +2417,6 @@ def save_payload_db():
 
 # === CLI Demo ===
 if __name__ == '__main__':
-    print("\n\033[1;96m[Phase 10 – Part 2: Module A — Payload Repository Builder]\033[0m")
+    print("\n\033[1;96m[M 10 – P 2: Module A — Payload Repository Builder]\033[0m")
     save_payload_db()
     print(f"Total payloads stored: {len(payloads)}")
