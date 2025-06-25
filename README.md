@@ -55,6 +55,20 @@ git clone https://github.com/Venomous123321/web_vuln_scanner.git
 ```bash
 cd web_vuln_scan
 ```
+🔘 Create  environment for requirements
+```bash
+sudo apt update
+```
+```bash
+sudo apt install python3 python3-venv python3-pip -y
+```
+```bash
+python3 -m venv venv
+```
+```bash
+source venv/bin/activate
+```
+⏩ Then
 ```bash
 pip install -r requirements.txt
 ```
